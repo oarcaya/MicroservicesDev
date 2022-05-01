@@ -5,8 +5,8 @@ metadata:
     labels:
         app: gateway
         type: microservice
-    spec: 
-        containers:
+spec: 
+    containers:
         - name: gateway-app
           image: oarcaya1972/serviciosapigateway:latest
           ports: 

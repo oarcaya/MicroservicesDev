@@ -5,16 +5,17 @@ metadata:
     labels:
         app: microservice-libreria
         name: mongo-pod
-    spec: 
-        containers:
-        - name: mongomongo:4.2.12
-          command:
-          - /bin/bash
-          - -c
-          env:
-          - name: MONGO_INITDB_ROOT_USERNAME
-            value: "oarcaya1972"
-          - name: MONGO_INITDB-ROOT_PASSWORD
-            value: "Caro2018*."
+spec: 
+    containers:
+    - name: mongo
+      image: mongo:5.0.7
+      command:
+        - /bin/bash
+        - -c
+      env:
+        - name: MONGO_INITDB_ROOT_USERNAME
+          value: "oarcaya1972"
+        - name: MONGO_INITDB-ROOT_PASSWORD
+          value: "Caro2018*."
           ports:
-            - containerPort: 27017
+        - containerPort: 27017

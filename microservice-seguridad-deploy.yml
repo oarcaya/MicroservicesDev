@@ -13,16 +13,16 @@ spec:
       type: microservice
   template:
     metadata:
-    data: microservice-seguridad-pod
-    labels:
-        app: microservice-seguridad
-        type: microservice
+        name: microservice-seguridad-pod
+        labels:
+            app: microservice-seguridad
+            type: microservice
     spec: 
         containers:
-        - name: microservice-seguridad-app
-          image: oarcaya1972/serviciosapiseguridad:latest
-          ports: 
-            - containerPort: 80
-          env:
+            - name: microservice-seguridad-app
+              image: oarcaya1972/serviciosapiseguridad:latest
+              ports: 
+                - containerPort: 80
+        env:
             - name: ConnectionStrings__ConexionDB
-              value: Server=mssql-service;Database=Seguridad;Username=sa;Password=oarcaya$
+              value: Server=mssql-service;Database=Seguridad;User=sa;Password=oarcaya$
