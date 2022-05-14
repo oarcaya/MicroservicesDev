@@ -20,9 +20,9 @@ spec:
     spec:
       containers:
         - name: microservice-libreria-app
-          image: oarcaya1972/serviciosapilibreria:v3.#{Build.BuildId}#
+          image: oarcaya1972/serviciosapilibreria:latest
           ports:
             - containerPort: 80
           env:
             - name: MongoDb__ConnectionString
-              value: mongodb://oarcaya1972:Caro20181@mongo-service:27017
+              value: mongodb://"":"".@mongo-service:27017
