@@ -5,24 +5,24 @@ metadata:
   labels:
     name: microservice-seguridad-deploy
     app: microservice
-    spec:
-        replicas: 2
-        selector:
-            matchLabels:
-                app: microservice-seguridad
-                type: microservice
-            template:
-        metadata:
-            name: microservice-seguridad-pod
-            labels:
-                app: microservice-seguridad
-                type: microservice
-        spec: 
-            containers:
-                - name: microservice-seguridad-app
-                  image: oarcaya1972/serviciosapiseguridad:latest
-                  ports: 
-                    - containerPort: 80
-            env:
-                - name: ConnectionStrings__ConexionDB
-                  value: Server=mssql-service;Database=Seguridad;User=sa;Password=oarcaya$
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: microservice-seguridad
+      type: microservice
+  template:
+    metadata:
+      name: microservice-seguridad-pod
+      labels:
+        app: microservice-seguridad
+        type: microservice
+    spec: 
+      containers:
+        - name: microservice-seguridad-app
+          image: oarcaya1972/serviciosapiseguridad:latest
+          ports: 
+            - containerPort: 80
+          env:
+            - name: ConnectionStrings__ConexionDB
+              value: Server=mssql-service;Database=Seguridad;User=sa;Password=oarcaya$
