@@ -9,7 +9,7 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-	  app: microservice-libreria
+      app: microservice-libreria
       name: mongo-pod
   template:
     metadata:
@@ -24,10 +24,5 @@ spec:
           command:
             - /bin/bash
             - -c
-          env:
-            - name: MONGO_INITDB_ROOT_USERNAME
-              value: ""
-            - name: MONGO_INITDB-ROOT_PASSWORD
-              value: ""
           ports:
             - containerPort: 27017
