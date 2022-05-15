@@ -4,7 +4,7 @@ metadata:
   name: mssql-deploy
   labels:
     name: mssql-deploy
-    app: microservice-seguridad
+    app: microservice
 spec:
   replicas: 1
   selector:
