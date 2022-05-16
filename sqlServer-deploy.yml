@@ -23,8 +23,8 @@ spec:
           image: mcr.microsoft.com/mssql/server
           ports:
             - containerPort: 1433
-      env:
-        - name: ACCEPT_EULA
-          value: "SA"
-        - name: PASSWORD
-          value: "oarcaya$"
+          env:
+            - name: ACCEPT_EULA
+              value: "SA"
+            - name: PASSWORD
+              value: "oarcaya$"
